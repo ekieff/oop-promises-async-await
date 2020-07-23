@@ -29,3 +29,23 @@ const pierre = {
 pierre.__proto__ = mia;
 console.log(pierre);
 console.log(mia);
+
+//constructor functions
+function User(name){ //constructor function needs to be capitalized
+    this.name = name;  //creates a template
+
+}
+let adam = new User('Adam'); //when initiating a constructor function
+console.log(adam.name);
+
+function Roommate (name, income, routine){
+    this.name = name;
+    this.income = income;
+    this.routine = routine;
+}
+let emma = new Roommate('Emma', true, 'morning bird');
+console.log(emma);
+let shanna = new Roommate('Shanna', false, 'night owl');
+console.log(shanna);
+let andrea = new Roommate('Andrea', true, 'morning bird');
+console.log(andrea);
