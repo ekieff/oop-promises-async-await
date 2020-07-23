@@ -102,3 +102,12 @@ fetch('https://api.github.com/users/ekieff')
         
 })
 
+fetch('https://api.github.com/users/romebell')
+.then(response => {
+    return response.json();
+})
+.then(jsonData =>{
+    console.log(jsonData);
+    const rome = new GithubProfile(jsonData.login, jsonData.name, jsonData.url);
+    console.log(rome);
+})
